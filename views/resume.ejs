@@ -1,0 +1,77 @@
+<html>
+<%- include('includes/mentorchhead.ejs') %>
+<%- include('includes/sidebar.ejs') %>
+<body>
+
+<script>
+var resume_id = '<%=uid%>';
+</script>
+
+<%- include('includes/searchbar.ejs') %>
+<div class="header-content"><div class="profile-pic-med header-img " src="" style="height:150px; width:150px"></div>
+<span class="inline-block name-header">
+  <h1 class="resume-heading name-bar"></h1>
+  <h2 class="name-sub resume-heading"></h2>
+
+  </div>
+</span>
+<button id="connect-btn" class="ripplelink"><span class="mentorch-icon torch"></span>Connect!</button>
+</div>
+
+<div class="hub-wrapper">
+  <div class="hub-container">
+  <div class="paper container slide slider no-max">
+
+    <div class="row" style="padding: 13px;">
+    <div class="col-md-6">
+      <div class="resume-module">
+      </div>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-8">
+    <div class="col-md-12">
+      <div class="resume-module about-module">
+        <div class="header-bar"><span id="header-point"></span>About me</div>
+        <div class="module-content about-me-content"></div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="resume-module experience-module">
+        <div class="header-bar"><span id="header-point"></span>Experience</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-md-4">
+    <div class="col-md-12">
+      <div class="resume-module skills-module">
+        <div class="header-bar"><span id="header-point"></span>Skills</div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="resume-module education-module">
+        <div class="header-bar"><span id="header-point"></span>Education</div>
+        <div class="module-content">
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<div id="uid" hidden><%= uid %></div>
+</body>
+<%- include('includes/footer.ejs') %>
+<link href="css/sidebar.css" rel="stylesheet"></link>
+
+<script src="js/user.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/resume.js"></script>
+<script src="js/connectButton.js"></script>
+</html>

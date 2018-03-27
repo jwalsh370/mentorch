@@ -1,0 +1,47 @@
+<html>
+<%- include('includes/mentorchhead.ejs') %>
+<%- include('includes/mentorchheader.ejs') %>
+<link rel="stylesheet" type='text/css' href='/css/loginpage.css'>
+<body>
+
+<div class="col-md-6 full-length" id="login-img">
+<h1 class="thin-h1 white">Find your Passion!</h1>
+<p>Think of the good we can create in the world if everyone took the time to mentor just one person.</p>
+</div>
+<div class="col-md-6 full-length" id="login-box">
+  <div id="login-container">
+  <h1 class="thin-h1">LOGIN</h1>
+    <form method="POST" action="">
+      <input type="text" name="username" id="login-username" placeholder="E-mail" class="loginpage-input"></input></br>
+      <input type="password" name="password" id="login-password" placeholder="Password" class="loginpage-input"></input></br>
+      <input type="button" class="small-button full-width-button" id="login-screen-button" value="login"></input>
+      <div class="full-width-button facebook-signin" >Sign in with Facebook</div>
+      <div class="full-width-button google-signin" >Sign in with Google</div>
+      <p hidden class="text-centered error-message" id="login-error"></p>
+    </form>
+    Don't have an account? <a href="#register" id="register-button">Register</a> today!
+  </div>
+
+  <div id="register-container" class="hidden">
+
+  <h1 class="thin-h1">REGISTER</h1>
+    <form method="POST" action="">
+      <input type="text" name="username" id="register-username" placeholder="E-mail" class="loginpage-input"></input></br>
+      <input type="text" name="username" id="first-name" placeholder="First name" class="loginpage-input"></input></br>
+      <input type="text" name="" id="last-name" placeholder="Last name" class="loginpage-input"></input></br>
+      <input type="text" name="" id="state" placeholder="State" class="loginpage-input"></input></br>
+      <input type="text" name="" id="city" placeholder="City" class="loginpage-input"></input></br>
+      <input type="date" name="" id="birthday" placeholder="City" class="loginpage-input"></input></br>
+      <input type="password" name="password" id="register-password" placeholder="Password" class="loginpage-input"></input></br>
+      <input type="password" name="confirm-password" id="register-password-confirm" placeholder="Re-enter Password" class="loginpage-input"></input></br>
+      <input type="button" class="small-button full-width-button" id="register-screen-button" value="Register"></input>
+      <p hidden class="text-centered error-message" id="register-error"></p>
+    </form>
+    Have an account? <a href="#register" id="logintoday-button">Login</a>
+  </div>
+</div>
+
+</body>
+<%- include('includes/footer.ejs') %>
+<script src="/js/login-page.js"></script>
+</html>

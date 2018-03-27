@@ -1,0 +1,25 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+
+<div class="container-fluid main">
+    <div id="brand"><img src="img/logo.png"></img></div>
+</div>
+
+</body>
+
+
+<script>
+var username = '<%=username%>';
+var password = '<%=password%>';
+alert(username + ' ' + password)
+</script>
+
+
+<%- include('includes/footer.ejs') %>
+
+<script>
+setTimeout(3000, function(){
+  window.location.replace('/panel');
+})
+</script>

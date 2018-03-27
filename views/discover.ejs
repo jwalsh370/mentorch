@@ -1,0 +1,72 @@
+<html>
+<%- include('includes/mentorchhead.ejs') %>
+<%- include('includes/sidebar.ejs') %>
+
+<link href="css/sidebar.css" rel="stylesheet"></link>
+<link href="css/contacts.css" rel="stylesheet"></link>
+<link href="css/discover.css" rel="stylesheet"></link>
+<body>
+
+<%- include('includes/searchbar.ejs') %>
+
+<div class="hub-wrapper">
+  <div class="hub-container">
+
+
+    <h2 class="black-text">Discover new people!</h2>
+    <h3 class="blue-text">Filter results by clicking on tags below or searching by name!</h3>
+    <input class="searchbar search-shadow" placeholder="Discover by name">
+    <div class="tag-container row align-left">
+      <div class="military-tags tags-group no-margin">
+        <div class="tags-title">Military Tags</div>
+        <tagbutton class='profile-tag' id="army">Army</tagbutton>
+        <tagbutton class='profile-tag' id="marine">Marine</tagbutton><span class="small-popup marinepop hidden">
+          <tagbutton class='profile-tag' id="marinegroundcombat">Marine Ground Combat</tagbutton>
+          <tagbutton class='profile-tag' id="marinespecialoperations">Marine Special Operations</tagbutton>
+          <tagbutton class='profile-tag' id="marineaviation">Marine Aviation</tagbutton>
+          <tagbutton class='profile-tag' id="marinelogisticsandsupport">Marine Logistics and Support</tagbutton>
+          <tagbutton class='profile-tag' id="marineadministration">Marine Administration</tagbutton>
+          <tagbutton class='profile-tag' id="marinecommunications">Marine Communications</tagbutton>
+        </span>
+        <tagbutton class='profile-tag' id="airforce">Airforce</tagbutton>
+        <tagbutton class='profile-tag' id="navy">Navy</tagbutton>
+        <span class="small-popup navypop hidden">
+          <tagbutton class='profile-tag' id="navysurfacewarfare">Navy Surface Warfare</tagbutton>
+          <tagbutton class='profile-tag' id="navalaviation">Naval Aviation</tagbutton>
+          <tagbutton class='profile-tag' id="navynuclearpower">Navy Nuclear Power</tagbutton>
+          <tagbutton class='profile-tag' id="navalspecialwarfare">Naval Special Warfare</tagbutton>
+          <tagbutton class='profile-tag' id="navyinformationtechnology">Navy Information Technology</tagbutton>
+          <tagbutton class='profile-tag' id="navalengineering">Naval Engineering</tagbutton>
+          <tagbutton class='profile-tag' id="navybusinessandlegal">Navy Business and Legal</tagbutton>
+        </span>
+        <tagbutton class='profile-tag' id="coastguard">Coast Guard</tagbutton>
+        <tagbutton class='profile-tag' id="nationalguard">National Guard</tagbutton>
+        <tagbutton class='profile-tag' id="nama">NAMA</tagbutton>
+      </div>
+      <div class="entrepreneur-tags tags-group">
+        <div class="tags-title">Entrepreneur Tags</div>
+        <tagbutton class='profile-tag' id="athlete">Athlete</tagbutton>
+        <tagbutton class='profile-tag' id="business">Business</tagbutton>
+        <tagbutton class='profile-tag' id="design">Design</tagbutton>
+        <tagbutton class='profile-tag' id="music">Music</tagbutton>
+        <tagbutton class='profile-tag' id="programming">Programming</tagbutton>
+        <tagbutton class='profile-tag' id="fashion">Fashion</tagbutton>
+        <tagbutton class='profile-tag' id="marketing">Marketing</tagbutton>
+        <tagbutton class='profile-tag' id="consulting">Consulting</tagbutton>
+      </div>
+    </div>
+    <div class="card-container text-center">
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+<%- include('includes/footer.ejs') %>
+
+<script src="js/user.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/discover.js"></script>
+<script src="js/universalConnectButton.js"></script>
+</html>

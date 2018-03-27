@@ -1,0 +1,18 @@
+<%- include('includes/mentorchhead.ejs') %>
+
+<body>
+
+<div class="container-fluid main">
+    <div id="brand"><img src="img/logo.png"></img></div>
+  <div class="login-form">
+    <form method="POST" action="/login">
+      <input name="username" type="text" placeholder="username"></input></br>
+      <input name="password" type="password" placeholder="password"></input></br>
+      <input type="submit"></input>
+    </form>
+  </div>
+</div>
+
+</body>
+<%- include('includes/footer.ejs') %>
+<script src="/scripts/landingAnim.js"></script>

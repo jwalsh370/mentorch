@@ -1,0 +1,31 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid nav-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<?php echo $root ?>">
+        <img src="/img/logowhite.png" id="logo">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse navbar-right" id="navBar">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="<?php echo $root ?>">About Us</a></li> -->
+        <li><a href="/login" class="red-button" id="signup-button">Sign Up</a></li>
+        <li><a href="/login" id="signin-button">Sign In</a></li>
+      </ul>
+      <ul hidden class="nav navbar-nav navbar-right usercontrol">
+        <li><a href="#" id="username"><span class="glyphicon glyphicon-log-in"></span> Username</a></li>
+        <div hidden class="dropdown">
+          <div class="dropdown-content">
+            <a href="/visionboard" class="small-button" id="dashboard-button">Vision Board</a>
+            <a href="#" id="logout-button">Logout!</a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>

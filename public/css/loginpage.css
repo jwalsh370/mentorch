@@ -1,0 +1,101 @@
+.thin-h1 {
+    color: #444b51;
+    font-weight: 700;
+    font-family: 'Work Sans';
+    font-size: 50;
+}
+
+.loginpage-input {
+    border: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-size: 20;
+    font-family: 'Work Sans';
+    color: #3c3c3c;
+    font-weight: 500;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+
+
+
+.small-button:hover {
+    background-color: #ac0a32;
+}
+
+.error-message {
+    background-color: #ffffff;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 100;
+    color: #f60000;
+}
+
+#login-box {
+    background-color: #ffffff;
+    padding: 70px;
+    padding-top: 140px;
+    text-align: center;
+    /* background-image: url('/img/bg-filler-sparkles2.png'); */
+}
+
+#login-container {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#register-container {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-image: linear-gradient(113deg, #b4b4b4, #de032e);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+#login-img {
+    background-image: linear-gradient(113deg, rgb(245, 0, 44), #210e15), url(/img/headerbg.png);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: white;
+    padding: 10%;
+}
+
+a#signin-button {
+    color: #ff5c5c;
+    font-weight: 600;
+    font-family: 'Work Sans';
+}
+
+.navbar-inverse .navbar-nav>li>a.red-button {
+    color: #ff5c5c;
+    border: solid 2px #ff5c5c;
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: 'Work Sans';
+}
+
+p{
+  font-family: 'Work Sans';
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.white{
+  color:white;
+}

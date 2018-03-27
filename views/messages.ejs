@@ -1,0 +1,52 @@
+<html>
+<%- include('includes/mentorchhead.ejs') %>
+<%- include('includes/sidebar.ejs') %>
+<link href="css/sidebar.css" rel="stylesheet"></link>
+<link href="css/contacts.css" rel="stylesheet"></link>
+<link href="css/messages.css" rel="stylesheet"></link>
+<body>
+
+<%- include('includes/searchbar.ejs') %>
+
+<div class="hub-wrapper">
+  <div class="hub-container">
+  <div class="dark-paper">
+    <div class="paper-content">
+      <div class="col-md-4 col-sm-4 dark-paper">
+        <h2 class="black-text red">Contacts</h2>
+        <div id="contact-container">
+          <div class="contact hidden placeholder">
+            <div class="small-profile-pic"></div>
+            <div id="contact-name"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-8 contact-controls-container" id="contact-controls-container no-margin">
+        <div class="info-bar"><img id="selected-contact-img"><span id="selected-contact"></span></div>
+        <div class="inset-paper messages-container" id="contact-controls">
+
+
+
+        </div>
+        <div class="bar-container">
+          <input type="text" placeholder="message" class="message-text col-md-10"></input><input type="button" value="Send" class="send-button col-md-2"></input>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+  </div>
+</div>
+
+<div id="uid" hidden><?php echo $_GET["name"]; ?></div>
+</body>
+<%- include('includes/footer.ejs') %>
+
+
+<script src="js/user.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/messages.js"></script>
+<script src="js/connectButton.js"></script>
+</html>
