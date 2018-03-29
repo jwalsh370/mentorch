@@ -18,7 +18,7 @@ function login(username, password){
       $("#login-error").html(error.message);
       $("#login-error").removeAttr("hidden");
     } else {
-      location.replace('/visionboard.php')
+      location.replace('/visionboard')
     }
   }).then(function(){
 
@@ -50,8 +50,11 @@ function register(username, password){
             '/img/userimg.png',
             1
             );
-          }, 2000)
-          location.replace('/visionboard.php')
+            setTimeout(function(){
+              location.replace('/visionboard')
+            }, 1000)
+          }, 3000)
+
         }
       })
     })
