@@ -723,3 +723,10 @@ input.social-input {
     border: solid 1px #eaeaea;
     margin-bottom: 10px;
 }
+
+video {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    top: 29%;
+}
