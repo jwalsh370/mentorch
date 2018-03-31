@@ -16,8 +16,11 @@ $('.notifications-icon').click(function(){
 
 })
 
+var USERID;
+
 auth.onAuthStateChanged(function(user){
 
+  USERID = user.uid;
 
   var count = 0;
   $('#notification-count').hide()

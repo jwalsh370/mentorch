@@ -43,6 +43,7 @@ var client = algoliasearch('E3R4JOR1Z6', '5cfaa73207b882d4925325869394c3e9');
 
 var index = client.initIndex('contacts');
 
+
 //index.addObject({
 //  firstname: 'Jimmie',
 //  lastname: 'Barninger'

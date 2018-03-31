@@ -40,12 +40,23 @@ auth.onAuthStateChanged(function(user){
           userRef.child(selectedUser).child('push_notifications').push({
             type: 'Selection',
             title: myName + ' is calling you!',
+            uid: user.uid,
             message: 'You are recieving a video chat call. You can accept or decline below!',
             settings: {
               sound: 'bop.flac',
-              expire: 6000
+              expire: 6000,
+              button1: 'call',
+              button2: '#decline'
+
             }
           })
+          userRef.child(selectedUser).child('call').update({
+            partner: user.uid
+          })
+          userRef.child(user.uid).child('call').update({
+            partner: selectedUser
+          })
+          location.replace('call#init');
         })
     })
 

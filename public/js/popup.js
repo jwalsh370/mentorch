@@ -12,6 +12,15 @@ var createPopup = function(type, title, message, settings){
     var newPopup = $(SELECTION_POPUP).appendTo('body');
     $(newPopup).find('#title').html(title);
     $(newPopup).find('#message').html(message);
+    $(newPopup).find('#button1').click(function(){
+      location.replace(settings.button1)
+    })
+    $(newPopup).find('#button1').click(function(){
+      location.replace(settings.button1)
+    })
+    $(newPopup).find('#button2').click(function(){
+      location.replace(settings.button2)
+    })
     setTimeout(function(){
       $(newPopup).remove()
 

@@ -2,10 +2,21 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var expressValidator = require("express-validator");
+var Peer = require('simple-peer');
+var _ = require('lodash');
+
 
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http)
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+
+
+
+
 
 // Express Validator middleware
 app.use(expressValidator({
@@ -92,10 +103,54 @@ app.get('/user-settings', function(req, res){
   });
 })
 
+
+
+app.all('/call', function(req, res){
+
+  io.on('connection', function(socket){
+    var peersToAdvertise = _.chain(io.sockets.connected).values().without(socket).sample(5).value();
+    console.log('advertising peers' + _.map(peersToAdvertise, 'id'));
+
+
+    console.log(Object.keys(peersToAdvertise));
+
+
+    peersToAdvertise.forEach(function(socket2) {
+      socket2.emit('peer', {
+        peerId: socket.id,
+        initiator: false
+      });
+      socket.emit('peer', {
+        peerId: socket2.id,
+        initiator: true
+      });
+    });
+
+    socket.on('signal', function(data) {
+        var socket2 = io.sockets.connected[data.peerId];
+        if (!socket2) { return; }
+
+        socket2.emit('signal', {
+          signal: data.signal,
+          peerId: socket.id
+        });
+      });
+
+
+    console.log(socket.id + ' Has Connected!')
+  })
+
+
+
+  res.render('call', {
+  });
+
+})
+
 var port = process.env.PORT || 8888;
 
 app.set('port', (process.env.PORT || 8888))
 
-app.listen(port, function(){
+http.listen(port, function(){
   console.log("Server is up and running on port " + port);
 })
