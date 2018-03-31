@@ -59,7 +59,8 @@ navigator.getUserMedia({ video:true, audio: true}, function(stream){
         peer.on('stream', function(stream){
           console.log("CREATING VIDEO OBJECT")
           var video = document.createElement('video');
-          $(video).appendTo('body');
+          $(video).appendTo('.hub-container');
+          $(video).draggable();
           video.src = window.URL.createObjectURL(stream)
           video.play()
         })
