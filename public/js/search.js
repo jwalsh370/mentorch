@@ -11,7 +11,7 @@ $('.search-bar-input').focus(function(){
         var uid = new Array();
         var index = i;
         uid.push(results.hits[i].uid);
-        var newResult = $(SEARCH_RESULT).html(results.hits[i].firstname + " " + results.hits[i].lastname).attr('href', '/resume.php?name=' + results.hits[i].uid)
+        var newResult = $(SEARCH_RESULT).html(results.hits[i].firstname + " " + results.hits[i].lastname).attr('href', '/resume?id=' + results.hits[i].uid)
         $('.search-container').append(newResult);
       }
     });
