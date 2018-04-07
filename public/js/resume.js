@@ -335,7 +335,7 @@ $(".addIcon").click(function(){
                 name: $("#experience-name").val(),
                 start_date: $("#start-date").val(),
                 end_date: $("#end-date").val(),
-                description: $("#experience-description")
+                description: $("#experience-description").val()
               })
               $(".grey-shade").remove();
               //location.reload();
