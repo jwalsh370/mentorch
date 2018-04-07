@@ -117,3 +117,13 @@
     box-shadow: 0 25px 41px -15px rgba(111, 10, 10, 0.68);
     transform: scale(1);
 }
+
+#broken-call-button:hover {
+    background-color: #d8d8d8;
+    color: #bebebe;
+}
+
+#broken-call-button {
+    background-color: #d8d8d8;
+    color: #bebebe;
+}
