@@ -51,7 +51,7 @@ function loadCards(){
             bigcard.find('.big-card-name').html(name)
             bigcard.find('.big-card-profession').html(profession)
             bigcard.find('.big-card-bio').html(bio)
-            bigcard.find('.big-card-resume').attr('href', 'resume.php?name=' + data.key)
+            bigcard.find('.big-card-resume').attr('href', 'resume?id=' + data.key)
             bigcard.find('.big-card-connect').click(function(){
               userRef.child(user.uid).once('value', function(snap){
                 var firstname = snap.val().first_name;
@@ -109,7 +109,7 @@ function loadCards(){
             bigcard.find('.big-card-name').html(name)
             bigcard.find('.big-card-profession').html(profession)
             bigcard.find('.big-card-bio').html(bio)
-            bigcard.find('.big-card-resume').attr('href', 'resume.php?name=' + data.key)
+            bigcard.find('.big-card-resume').attr('href', 'resume?id=' + data.key)
             bigcard.find('.big-card-connect').click(function(){
               userRef.child(user.uid).once('value', function(snap){
                 var firstname = snap.val().first_name;
