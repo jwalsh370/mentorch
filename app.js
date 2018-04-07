@@ -107,7 +107,11 @@ app.get('/user-settings', function(req, res){
 
 app.all('/call', function(req, res){
 
+  var localId = req.query.uid;
+  var partnerId = req.query.partner;
+
   io.on('connection', function(socket){
+    //socket.id = localId;
     var peersToAdvertise = _.chain(io.sockets.connected).values().without(socket).sample(5).value();
     console.log('advertising peers' + _.map(peersToAdvertise, 'id'));
 

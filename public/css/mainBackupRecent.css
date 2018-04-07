@@ -482,9 +482,9 @@ a#signin-button {
 }
 
 .search-bar {
-    height: 58px;
+    height: 74px;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 18px;
     padding-left: 100px;
     border-width: 1px;
     border-bottom-style: solid;
@@ -792,7 +792,6 @@ span#header-point {
   border: solid 1px #e8dad9;
   max-height: 80%;
   transition: all 0.7s ease 0s;
-  overflow: hidden;
 }
 
 

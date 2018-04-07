@@ -21,7 +21,7 @@ function login(username, password){
       location.replace('/visionboard')
     }
   }).then(function(){
-
+    location.replace('/visionboard')
   })
 }
 

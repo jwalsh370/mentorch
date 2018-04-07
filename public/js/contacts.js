@@ -56,7 +56,7 @@ auth.onAuthStateChanged(function(user){
           userRef.child(user.uid).child('call').update({
             partner: selectedUser
           })
-          location.replace('call#init');
+          location.replace('call?uid=' + user.uid + '&partner=' + selectedUser);
         })
     })
 
