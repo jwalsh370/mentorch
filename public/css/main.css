@@ -909,7 +909,6 @@ div#connect-btn {
     font-size: 19px;
     font-weight: 500;
     color: white;
-    background-color: #e35554;
     border-radius: 3px;
     cursor: default;
     position: absolute;
@@ -982,7 +981,6 @@ div#connect-btn {
 
 div#connect-btn:hover {
 
-    background-color: #ffacab;
 
 }
 
@@ -1238,7 +1236,6 @@ div#connect-btn {
     font-size: 19px;
     font-weight: 500;
     color: white;
-    background-color: #e35554;
     border-radius: 3px;
     cursor: default;
     position: initial;
@@ -1304,7 +1301,7 @@ label {
 }
 
 button#connect-btn {
-    transform: translateY(-14px);
+    transform: translateY(-62px);
 }
 
 button:focus {
