@@ -13,6 +13,7 @@ auth.onAuthStateChanged(function(user){
     $("#profession-input").val(data.val().profession)
     $("#bio-input").val(data.val().bio)
     $("#tags-input").val(data.val().tags)
+    $('#youtube-link-input').val(data.val().youtube)
     pic = data.val().profile_picture
     retrievedTags = data.val().tags
 
@@ -78,11 +79,13 @@ if(retrievedTags.match('Design')){
 
 
   $('#update-submit').click(function(){
+
     userRef.child(user.uid).update({
       first_name: $("#first-name-input").val(),
       last_name: $("#last-name-input").val(),
       profession: $("#profession-input").val(),
       bio: $("#bio-input").val(),
+      youtube: $('#youtube-link-input').val(),
     })
     index.saveObject({
       firstname: $("#first-name-input").val(),

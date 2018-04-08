@@ -16,6 +16,15 @@ auth.onAuthStateChanged(function(user){
       try{$('.experience').html(snap.child(resume_id).child('resume').val().experience);} catch(err){}
       try{$('.education').html(snap.child(resume_id).child('resume').val().education);} catch(err){}
 
+      try{
+        var ytLink = snap.child(resume_id).val().youtube;
+        ytLink = ytLink.split('=').pop()
+        //alert(ytLink)
+        $('#youtubeEmbed').attr('src', 'https://www.youtube.com/embed/' + ytLink)
+      } catch(err){
+        $('#youtubeEmbed').toggleClass('hidden');
+      }
+
 ////////////////// PROFILE PIC CHANGE ///////////////////
       if(resume_id == user.uid){
         $('.profile-pic-med').html(PIC_EDIT)
