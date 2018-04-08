@@ -619,9 +619,7 @@ h2 {
     height: 38px;
 }
 
-#youtubeEmbed {
-    padding: 23px;
-}
+
 
 
 
@@ -632,6 +630,15 @@ h2 {
 }
 
 @media (max-width:767px) {
+.hub-wrapper{
+  padding-top: 160px;
+}
+
+#youtubeEmbed {
+    padding: 23px;
+    width: 100%;
+}
+
 #wrapper {
     padding-left: 70px;
     transition: all .4s ease 0s;
