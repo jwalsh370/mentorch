@@ -619,6 +619,12 @@ h2 {
     height: 38px;
 }
 
+#youtubeEmbed {
+    padding: 23px;
+}
+
+
+
 #sidebar-wrapper {
     left: -185px;
 }
