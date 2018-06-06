@@ -1,18 +1,24 @@
-<%- include('includes/mentorchhead.ejs') %>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-<body>
+  <%- include('includes/head.ejs') %>
+  <link rel="stylesheet" type="text/css" href="css/landing.css"></link>
+  <body>
+  <%- include('includes/header.ejs') %>
 
-<div class="container-fluid main">
-    <div id="brand"><img src="img/logo.png"></img></div>
-  <div class="login-form">
-    <form method="POST" action="/login">
-      <input name="username" type="text" placeholder="username"></input></br>
-      <input name="password" type="password" placeholder="password"></input></br>
-      <input type="submit"></input>
-    </form>
+
+
+  <div class="container">
+      <div class="container-fluid flex-3">
+        <jumbotext>Leave a Legacy!</jumbotext>
+        <p class="header-text">Find a mentor. Be a mentor. Pass the torch.</p>
+        <button class="darkbg-button"><a href="/register">Sign up!</a></button>
+      </div>
   </div>
-</div>
-
-</body>
-<%- include('includes/footer.ejs') %>
-<script src="/scripts/landingAnim.js"></script>
+  <div class="container-padded">
+    <h1>Find your Passion</h1>
+    <h2thin>Think of the good we can create in the world if everyone took the time to mentor just one person.</h2thin>
+  </div>
+  <%- include('includes/footer.ejs') %>
+  </body>
+</html>

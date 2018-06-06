@@ -376,7 +376,7 @@ auth.onAuthStateChanged(function(user){
             $('#state-input').val(),
             $('#city-input').val(),
             $('#birthday-input').val(),
-            "/img/lal2.png",
+            "/img/userimg.png",
             1
             );
             $('.grey-shade').remove();
@@ -435,7 +435,7 @@ function createUser(first, last, state, city, birthdate, picture_url, index){
             bio: '',
             tags: '',
             uid: user.uid,
-            pic: '/img/lal2.png',
+            pic: '/img/userimg.png',
             objectID: user.uid
           }, function(err, content) {
             console.log(content);

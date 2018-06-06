@@ -1,77 +1,52 @@
-<html>
-<%- include('includes/mentorchhead.ejs') %>
-<%- include('includes/sidebar.ejs') %>
-<body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <script>
+    var uid = '<%= uid %>';
+    var firstname = '<%= name %>';
+  </script>
+  <%- include('includes/head.ejs') %>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8888/css/resume.css"></link>
+  <body>
+  <%- include('includes/header.ejs') %>
+  <chatbutton><i class="far fa-comment-alt"></i></chatbutton>
 
-<script>
-var resume_id = '<%=uid%>';
-</script>
 
-<%- include('includes/searchbar.ejs') %>
-<div class="header-content"><div class="profile-pic-med header-img " src="" style="height:150px; width:150px"></div>
-<span class="inline-block name-header">
-  <h1 class="resume-heading name-bar"></h1>
-  <h2 class="name-sub resume-heading"></h2>
-  <button id="connect-btn" class="ripplelink"><span class="mentorch-icon torch"></span>Connect!</button>
-</span>
-<iframe width="300" height="170" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id='youtubeEmbed'></iframe>
-</div>
-</div>
 
-<div class="hub-wrapper">
-  <div class="hub-container">
-  <div class="paper container slide slider no-max">
-
-    <div class="row" style="padding: 13px;">
-    <div class="col-md-6">
-      <div class="resume-module">
-      </div>
-    </div>
-    </div>
-
-    <div class="row">
-    <div class="col-md-8">
-    <div class="col-md-12">
-      <div class="resume-module about-module">
-        <div class="header-bar"><span id="header-point"></span>About me</div>
-        <div class="module-content about-me-content"></div>
-      </div>
-    </div>
-    <div class="col-md-12">
-      <div class="resume-module experience-module">
-        <div class="header-bar"><span id="header-point"></span>Experience</div>
-      </div>
-    </div>
-    </div>
-
-    <div class="col-md-4">
-    <div class="col-md-12">
-      <div class="resume-module skills-module">
-        <div class="header-bar"><span id="header-point"></span>Skills</div>
-      </div>
-    </div>
-    <div class="col-md-12">
-      <div class="resume-module education-module">
-        <div class="header-bar"><span id="header-point"></span>Education</div>
-        <div class="module-content">
-
+  <div class="container">
+      <%- include('includes/controlpanel.ejs') %>
+    <div class="hub-container flex-3">
+      <div class="main-header">
+        <div class="header-profile-picture"><img class="profile-pic" src="<%= pic %>"></img></div>
+        <div class='header-info'>
+          <h1><%= name %></h1>
+          <h3><%= profession %></h3>
+          <i class="fab fa-facebook-square"></i><i class="fab fa-linkedin"></i><i class="fab fa-instagram"></i>
         </div>
       </div>
-    </div>
-    </div>
-    </div>
+      <div class="main-panel hub-content">
+        <row>
+          <div class="about-me panel-content">
+            <h2>About me</h2>
+            <p><%= bio %></p>
+          </div>
+          <div class="skills panel-content">
+            <h2>Skills</h2>
+          </div>
+        </row>
+        <row>
+          <div class="experience panel-content">
+            <h2>Experience</h2>
 
+          </div>
+          <div class="education panel-content">
+            <h2>Education</h2>
+          </div>
+        </row>
+      </div>
+    </div>
+    <div class="hub-container"><div class="message-panel hub-content"></div></div>
   </div>
-</div>
-</div>
-
-<div id="uid" hidden><%= uid %></div>
-</body>
-<%- include('includes/footer.ejs') %>
-<link href="css/sidebar.css" rel="stylesheet"></link>
-
-<script src="js/user.js"></script>
-<script src="js/sidebar.js"></script>
-<script src="js/resume.js"></script>
-<script src="js/connectButton.js"></script>
+  <%- include('includes/footer.ejs') %>
+  <script src="http://localhost:8888/scripts/resume.js"></script>
+  </body>
 </html>

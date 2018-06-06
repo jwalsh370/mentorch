@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <%- include('includes/head.ejs') %>
+  <link rel="stylesheet" type="text/css" href="css/settings.css"></link>
+
+  <body>
+  <%- include('includes/header.ejs') %>
+
+
+
+  <div class="container">
+
+    <div class="hub-container">
+      <div class="control-panel hub-content">
+        <h4>Settings</h4>
+        <a class="control-link" href="/visionboard">User settings</a>
+        <a class="control-link" href="/contacts">Privacy</a>
+        <a class="control-link" href="/messages">Preferences</a>
+        <a class="control-link" href="/settings">Other</a>
+      </div>
+    </div>
+
+    <div class="hub-container flex-3">
+      <div class="main-panel hub-content" style="text-align: center;">
+        <img class='user-img'></img></br>
+        <input class="first-name" type="text" placeholder="First name"></input></br>
+        <input class="last-name" type="text" placeholder="Last name"></input></br>
+        <textarea class="bio" type="text" placeholder="Bio"></textarea></br>
+        <button class="full-width">Save</button>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  <%- include('includes/footer.ejs') %>
+  <script src="/scripts/settings.js"></script>
+  </body>
+</html>

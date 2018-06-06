@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <popup class="transparent">
+    <div class="content content1 transparent">
+      <div class="popup-container">
+        <div class="popup-header">
+          <h1 class='popup-h1'>More details about you!</h1>
+          <h3 class='popup-h3'>To enhance our mentor matching machines, tell us a little about yourself!</h1>
+        </div>
+        <input class="popup-input" type='text' placeholder='City' id='city'></input>
+        <input class="popup-input" type='text' placeholder='State' id='state'></input>
+        <input class="popup-input" type='date' placeholder='Birthday' id='birthday'></input>
+        <input class="popup-input" type='text' placeholder='Profession' id='profession'></input>
+        <input class="popup-button popup-button1" type='button' value='Next' id='next1'></input>
+      </div>
+    </div>
+
+    <div class="content content2 transparent">
+      <div class="popup-container">
+        <div class="popup-header">
+          <h1 class='popup-h1'>What are your interests?</h1>
+          <h3 class='popup-h3'>Select some tags so we can conenct you with like-minded people!</h1>
+        </div>
+        <div class="tagbox-container">
+          <tagbox style="background-image: url('https://images.unsplash.com/photo-1524672875191-f3e0c7dd6dcd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9eaf7deced5ab2bd14b060807ae18983&auto=format&fit=crop&w=1350&q=80')">MILITARY
+            <div class="military tag-container">
+              <tag>Army</tag>
+              <tag>Marine</tag>
+              <tag>Airforce</tag>
+              <tag>Navy</tag>
+              <tag>Coast Guard</tag>
+              <tag>National Guard</tag>
+              <tag>NAMA</tag>
+            </div>
+          </tagbox>
+          <tagbox style="background-image: url('https://images.unsplash.com/photo-1518600506278-4e8ef466b810?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=858391bd28bf4aadaa5b3e0750edb485&auto=format&fit=crop&w=1293&q=80')">BUSINESS
+            <div class="business tag-container">
+              <tag>Marketing</tag>
+              <tag>Consulting</tag>
+              <tag>Entrepreneur</tag>
+            </div>
+          </tagbox>
+          <tagbox style="background-image: url('https://images.unsplash.com/photo-1461344577544-4e5dc9487184?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=37e73715ba28e420995f55bcf67f3c47&auto=format&fit=crop&w=1350&q=80')">DESIGN
+            <div class="design tag-container">
+              <tag>Graphics</tag>
+              <tag>Music</tag>
+              <tag>Fashion</tag>
+              <tag>Programming</tag>
+            </div>
+          </tagbox>
+          <tagbox style="background-image: url('https://images.unsplash.com/photo-1483721310020-03333e577078?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6a437732f90bc9951d6316ee9c1a2565&auto=format&fit=crop&w=1400&q=80')">SPORTS
+          </tagbox>
+          <tagbox style="background-image: url('https://images.unsplash.com/photo-1489367966527-6b20c16a2ba0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2cd87c733c8c925ef544213091e7f7e9&auto=format&fit=crop&w=2001&q=80')">MORE
+          </tagbox>
+        </div>
+        <input class="popup-button popup-button2" type='button' value='Next' id='next2'></input>
+      </div>
+    </div>
+
+  </popup>
+
+  <%- include('includes/head.ejs') %>
+  <link rel="stylesheet" type="text/css" href="css/loginpage.css"></link>
+  <body>
+  <%- include('includes/header.ejs') %>
+
+
+
+  <div class="container">
+
+    <div class="hub-container flex-3">
+
+      <div class="main-panel hub-content">
+        <form id="login-form">
+          <img src="img/logo.png"></img></br>
+          <input id="firstname-input" class="login-input" type="text" placeholder="First name"></input></br>
+          <input id="lastname-input" class="login-input" type="text" placeholder="Last name"></input></br>
+          <input id="email-input" class="login-input" type="text" placeholder="Email"></input></br>
+          <input id="password-input" class="login-input" type="password" placeholder="Password"></input></br>
+          <input id="re-password-input" class="login-input" type="password" placeholder="Re-enter Password"></input></br>
+          <input class="register-submit login-submit" type="button" value="Register!"></input></br>
+          <a href="/login">Already have an account? Login here!</a>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+  <%- include('includes/footer.ejs') %>
+  <script src="/scripts/selecttags.js"></script>
+  <script src="/scripts/register.js"></script>
+
+  </body>
+</html>

@@ -1,58 +1,33 @@
-<html>
-<%- include('includes/mentorchhead.ejs') %>
-<%- include('includes/sidebar.ejs') %>
-<link href="css/sidebar.css" rel="stylesheet"></link>
-<link href="css/contacts.css" rel="stylesheet"></link>
-<body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <script>
 
-<%- include('includes/searchbar.ejs') %>
-
-
-<div class="hub-wrapper">
-  <div class="hub-container">
+  </script>
+  <%- include('includes/head.ejs') %>
+  <link rel="stylesheet" type="text/css" href="http://localhost:8888/css/contacts.css"></link>
+  <body>
+  <%- include('includes/header.ejs') %>
+  <chatbutton><i class="far fa-comment-alt"></i></chatbutton>
 
 
 
-    <div class="" id="contacts-wrapper">
+  <div class="container">
+    <%- include('includes/controlpanel.ejs') %>
 
+    <div class="hub-container flex-3">
+      <h2>Contacts</h2></br>
+      <div class="main-panel hub-content">
 
-
-
-    <div class="col-md-6 col-sm-12 col-85 paper" >
-      <div class="row text-center">
-        <h2 class="black-text">contacts</h2>
-        <input class="searchbar" placeholder="Search contacts"></input>
-      </div>
-      <div id="contact-container">
       </div>
     </div>
-    <div class="col-md-6 col-sm-12 col-85 paper" >
-      <div class="row text-center contact-container">
-        <div class="col-md-3 col-sm-12 paper slide" id="contact-controls-container">
-          <span class="exit-button"></span>
-          <img class="profile-pic-big"></img>
-          <div class="center-wrapper"><a class='contact-button' id="resume-button">Resume</a><a class='contact-button' id="message-button" href="/messages">Message</a><a class='contact-button' id="broken-call-button"><i class="fas fa-video"></i></a></div>
-          <div id="info-wrapper">
-            <h3 id="selected-contact-name">USERNAME</h3>
-            <p id="selected-contact-bio"></p>
-          </div>
-        </div>
+    <div class="hub-container">
+      <div class="message-panel hub-content">
       </div>
     </div>
-
-
-
-    </div>
-
   </div>
-</div>
 
-<div id="uid" hidden><?php echo $_GET["name"]; ?></div>
-</body>
-<%- include('includes/footer.ejs') %>
 
-<script src="js/user.js"></script>
-<script src="js/sidebar.js"></script>
-<script src="js/contacts.js"></script>
-<script src="js/connectButton.js"></script>
+  <%- include('includes/footer.ejs') %>
+  <script src="http://localhost:8888/scripts/contacts.js"></script>
+  </body>
 </html>
