@@ -8,6 +8,8 @@
           <h1 class='popup-h1'>More details about you!</h1>
           <h3 class='popup-h3'>To enhance our mentor matching machines, tell us a little about yourself!</h1>
         </div>
+        <input class="popup-input" type='text' placeholder='First Name' id='firstname'></input>
+        <input class="popup-input" type='text' placeholder='Last Name' id='lastname'></input>
         <input class="popup-input" type='text' placeholder='City' id='city'></input>
         <input class="popup-input" type='text' placeholder='State' id='state'></input>
         <input class="popup-input" type='date' placeholder='Birthday' id='birthday'></input>
@@ -71,17 +73,17 @@
 
     <div class="hub-container flex-3">
 
-      <div class="main-panel hub-content">
+      <div class="main-panel hub-content" style="text-align: center">
         <form id="login-form">
           <img src="img/logo.png"></img></br>
-          <input id="firstname-input" class="login-input" type="text" placeholder="First name"></input></br>
-          <input id="lastname-input" class="login-input" type="text" placeholder="Last name"></input></br>
           <input id="email-input" class="login-input" type="text" placeholder="Email"></input></br>
           <input id="password-input" class="login-input" type="password" placeholder="Password"></input></br>
           <input id="re-password-input" class="login-input" type="password" placeholder="Re-enter Password"></input></br>
           <input class="register-submit login-submit" type="button" value="Register!"></input></br>
-          <a href="/login">Already have an account? Login here!</a>
         </form>
+        <button class="google-login"><i class="fab fa-google"></i>Register with Google!</button></br>
+        <button class="facebook-login"><i class="fab fa-facebook-f"></i>Register with Facebook!</button></br>
+        <a href="/login">Already have an account? Login here!</a>
       </div>
     </div>
 

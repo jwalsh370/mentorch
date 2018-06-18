@@ -761,22 +761,20 @@ tag:hover {
 .slide-open {
     height: 75px;
     opacity: 0;
-    z-index: -10;
 }
 
 chatbox{
   padding: 29px;
-  position: fixed;
-  height: 77%;
-  width: 350px;
-  background-color: #931100;
-  right: 64px;
-  border-radius: 10px;
-  border-top: solid 22px #ce1f1f;
-  bottom: 60px;
-  box-shadow: 0px 2px 32px #895d5d45;
-  transition: all 0.3s ease 0s;
-  overflow: auto;
+    position: absolute;
+    height: 77%;
+    width: 270px;
+    background-color: #931100;
+    right: 64px;
+    border-radius: 10px;
+    border-top: solid 22px #ce1f1f;
+    bottom: 60px;
+    box-shadow: 0px 2px 32px #895d5d45;
+    transition: all 0.3s ease 0s;
 }
 
 contact {
@@ -806,13 +804,12 @@ contact {
 .chat-container {
     position: absolute;
     height: 88%;
-    width: 75%;
+    width: 69%;
     top: 24px;
     background-color: #ffffff;
     border-radius: 3px;
     padding: 22px;
     transition: all 0.3s ease 0s;
-    overflow: auto;
 }
 
 .chat-input {
@@ -822,100 +819,12 @@ contact {
     background-color: #dbdbdb;
     border: solid 1px #dbdbdb;
     border-radius: 50px;
+    bottom: 21px;
     transition: all 0.1s ease 0s;
     color: #393939;
-    padding-left: 14px;
 }
 
 .chat-input:hover, .chat-input:focus {
     background-color: white;
     outline: none;
-}
-
-.chat-send{
-    position: absolute;
-    right: 32px;
-    border: none;
-    background-color: #0f8bff;
-    color: white;
-    padding: 5px;
-    font-size: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-family: 'Roboto';
-    border-radius: 32px;
-    transition: all 0.2s ease 0s;
-}
-
-.backbutton {
-    position: absolute;
-    right: 32px;
-    font-size: 30px;
-    color: #a1a1a1;
-    font-weight: 400;
-    cursor: pointer;
-    transition: all 0.2s ease 0s;
-    top: 41px;
-    right: 46px;
-    background: #00000012;
-    border-radius: 60px;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-}
-
-.backbutton:hover {
-    transform: translateX(-3px);
-    color: #0f8bff;
-}
-
-message {
-    display: block;
-    width: 168px;
-    padding: 10px;
-    background-color: #8a5ba2;
-    color: white;
-    border-radius: 3px;
-    margin-bottom: 37px;
-    float: left;
-}
-
-p.message-content {
-    color: #fcf6ff;
-    font-weight: 400;
-}
-
-dot-img {
-    height: 16px;
-    width: 16px;
-    display: block;
-    border-radius: 50px;
-    background-color: #49b2ff;
-    position: absolute;
-    transform: translateY(-36px);
-}
-
-message.self {
-    float: right;
-    background-color: #ededed;
-}
-
-message.self dot-img {
-    right: 32px;
-}
-
-message.self p {
-    color: #515151;
-}
-
-controls {
-    display: block;
-    position: initial;
-    width: 78%;
-    height: 34px;
-    position: absolute;
-    bottom: 27px;
-    background-color: white;
-    padding: 16px;
-    border-top: solid 1px #cecece;
 }

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <script>
-    var uid = '<%= uid %>';
+    var resumeUid = '<%= uid %>';
     var firstname = '<%= name %>';
   </script>
   <%- include('includes/head.ejs') %>
-  <link rel="stylesheet" type="text/css" href="http://localhost:8888/css/resume.css"></link>
+  <link rel="stylesheet" type="text/css" href="../css/resume.css"></link>
   <body>
+
   <%- include('includes/header.ejs') %>
-  <chatbutton><i class="far fa-comment-alt"></i></chatbutton>
+  <%- include('includes/chatmodule.ejs') %>
+
+
 
 
 
@@ -27,19 +30,21 @@
         <row>
           <div class="about-me panel-content">
             <h2>About me</h2>
-            <p><%= bio %></p>
+            <p id="bio"><%= bio %></p>
           </div>
           <div class="skills panel-content">
-            <h2>Skills</h2>
+            <h2 class="skills-title">Skills</h2>
+
           </div>
         </row>
         <row>
           <div class="experience panel-content">
-            <h2>Experience</h2>
+            <h2 class="experience-title">Experience</h2>
 
           </div>
           <div class="education panel-content">
-            <h2>Education</h2>
+            <h2 class="education-title">Education</h2>
+
           </div>
         </row>
       </div>

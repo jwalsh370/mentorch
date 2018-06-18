@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <script>
+
+  </script>
+  <%- include('includes/head.ejs') %>
+  <link rel="stylesheet" type="text/css" href="css/discover.css"></link>
+  <body>
+  <%- include('includes/header.ejs') %>
+  <%- include('includes/chatmodule.ejs') %>
+
+
+
+  <div class="container">
+    <%- include('includes/controlpanel.ejs') %>
+
+    <div class="hub-container flex-3">
+      <h1>DISCOVER</h1></br>
+      <div class="main-panel hub-content">
+        <input type="text" class="search" id="discover-search" placeholder="Search for mentors or mentees by name!"></input>
+          <tag>Army</tag>
+          <tag>Marine</tag>
+          <tag>Airforce</tag>
+          <tag>Navy</tag>
+          <tag>Coast Guard</tag>
+          <tag>National Guard</tag>
+          <tag>NAMA</tag>
+          <tag>Marketing</tag>
+          <tag>Consulting</tag>
+          <tag>Entrepreneur</tag>
+          <tag>Graphics</tag>
+          <tag>Music</tag>
+          <tag>Fashion</tag>
+          <tag>Programming</tag>
+
+          <div class="results-container">
+            <div class="discover-result">
+              <img class="discover-result-pic" src="url('')"></img>
+              <h4 class="discover-result-name">Name Here</h4>
+              <p class="discover-result-profession">Profession here</p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="hub-container">
+      <div class="message-panel hub-content">
+      </div>
+    </div>
+  </div>
+
+
+  <%- include('includes/footer.ejs') %>
+  <script src="http://localhost:8888/scripts/discover.js"></script>
+  </body>
+</html>

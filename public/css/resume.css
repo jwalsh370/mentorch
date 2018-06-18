@@ -9,3 +9,59 @@
 .education-mod {
     margin-bottom: 12px;
 }
+
+.edit-content {
+    transition: all 0.2s ease 0s;
+}
+
+.edit-content:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+.edit-text{
+  width: 97%;
+    min-height: 68%;
+    border: solid 1px #dedede;
+    font-family: "Roboto";
+    padding: 13px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+}
+
+bar {
+    display: block;
+    height: 39px;
+    background-color: #6d6d6d47;
+    width: 52%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 40px;
+}
+
+.loading{
+  background-color: #ff0808;
+  width: 38%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+@media(max-width:768px){
+  .popup-input {
+    width: 80%;
+  }
+
+  input[type=range] {
+    width: 87%;
+  }
+
+  bar {
+    width: 87%;
+  }
+
+  .popup-button {
+    width: 87%;
+  }
+}

@@ -125,19 +125,36 @@ app.get('/resume/:id', function(req, res){
   var firstname = "First";
   var lastname = "Last";
   var education = "test";
-  userRef.child(id).once('value', function(snap){
-    name = snap.val().first_name + " " + snap.val().last_name;
-    //education = snap.val().resume.education;
-    res.render('resume', {
-      'uid' : id,
-      'name' : name,
-      'profession' : snap.val().profession,
-      'pic' : snap.val().profile_picture || '/img/userimg.png',
-      'bio' : snap.val().resume.about_me || 'About me!',
-      'education' : education || 'test'
-    });
-  });
 
+
+    userRef.once('value', function(snap){
+      if(snap.hasChild(id)){
+        userRef.child(id).once('value', function(snap){
+          name = snap.val().first_name + " " + snap.val().last_name;
+          //education = snap.val().resume.education;
+          res.render('resume', {
+            'uid' : id,
+            'name' : name,
+            'profession' : snap.val().profession,
+            'pic' : snap.val().profile_picture || '/img/userimg.png',
+            'bio' : snap.val().resume.about_me || 'About me!',
+            'education' : education || 'test'
+          });
+        });
+      } else {
+        res.render('index')
+      }
+    })
+
+
+
+
+
+})
+
+app.get('/discover', function(req, res){
+  res.render('discover', {
+  });
 })
 
 app.get('/contacts', function(req, res){

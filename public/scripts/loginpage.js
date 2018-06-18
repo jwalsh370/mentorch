@@ -10,6 +10,7 @@ $('.facebook-login').click(function(){
   var provider = new firebase.auth.FacebookAuthProvider();
   firebase.auth().signInWithPopup(provider).then(function(result) {
   var user = result.user;
+
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -31,6 +32,9 @@ $('.google-login').click(function(){
   // The signed-in user info.
   var user = result.user;
   // ...
+
+  alert(user.getEmail())
+
   }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
