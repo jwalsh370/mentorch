@@ -43,6 +43,9 @@ $(document).ready(function(){
               })
 
             })
+          } else {
+
+
           }
         })
 
@@ -108,6 +111,7 @@ $(document).ready(function(){
 
           });
           if(resumeUid == UID){
+            $('.connect-button').hide()
             $(education).addClass('edit-content')
             $(education).click(function(){
               var editEducation = $(EDUCATION_UPDATE).insertAfter('head');
@@ -137,11 +141,40 @@ $(document).ready(function(){
             })
 
 
+          } else {
+
+            userRef.child(UID).child('friends').once('value', function(snap){
+              if(snap.hasChild(resumeUid)){
+                $('.connect-button').remove()
+              } else {
+
+                $('.connect-button').click(function(){
+
+                    userRef.child(UID).once('value', function(data){
+                      userRef.child(resumeUid).child('notifications').push({
+                        type: 'friend-request',
+                        firstname: data.val().first_name,
+                        lastname: data.val().last_name,
+                        pic: data.val().profile_picture,
+                        from: UID
+                      })
+                    })
+
+                    $('.connect-button').remove()
+
+
+
+                })
+
+
+              }
+            })
+
           }
         })
 
     } else {
-      alert('load bs')
+      alert('load')
     }
   })
 

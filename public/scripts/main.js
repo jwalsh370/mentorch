@@ -78,13 +78,59 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
 
   }
+
+  var count = 0;
+  $('#notification-count').hide()
+
+  userRef.child(UID).child('notifications').on('child_added', function(snap){
+    $('#notification-count').show()
+    count ++;
+    $('#notification-count').html(count);
+    if(snap.val().type == 'friend-request'){
+      var newNotification = $(CONNECTION_REQUEST).appendTo($('.alerts-dropdown'));
+      newNotification.find('.alert-name').html(snap.val().firstname + ' ' + snap.val().lastname)
+      newNotification.find('.alert-image').css('background-image', 'url(' + snap.val().pic + ')')
+      newNotification.find('.alert-name').click(function(){ location.replace('/resume/' + snap.val().from) })
+      newNotification.find('yes').click(function(){
+        userRef.child(UID).child('friends').child(snap.val().from).update({
+          uid: snap.val().from
+        })
+        userRef.child(snap.val().from).child('friends').child(UID).update({
+          uid: UID
+        })
+        userRef.child(UID).child('notifications').child(snap.key).remove()
+        newNotification.remove()
+        count--
+        if(count > 0){
+          $('#notification-count').html(count)
+        } else {
+          $('#notification-count').hide()
+        }
+      })
+      newNotification.find('no').click(function(){
+        userRef.child(UID).child('notifications').child(snap.key).remove()
+        newNotification.remove()
+        count--
+        if(count > 0){
+          $('#notification-count').html(count)
+        } else {
+          $('#notification-count').hide()
+        }
+      })
+    }
+  })
+
 });
 
 $('chatbutton').click(function(){
   $('chatbox').toggleClass('slide-open')
 })
 
-$('.chat-container')
+$('.alert-button').click(function(){
+  $('.alerts-dropdown').toggleClass('slide-open')
+})
+
+
 
 
 
@@ -98,3 +144,5 @@ var CONTACT =
 var PARTNER_MESSAGE = '<message><dot-img></dot-img><p class="message-content"></p></message>';
 
 var SELF_MESSAGE = '<message class="self"><dot-img></dot-img><p class="message-content"></p></message>';
+
+var CONNECTION_REQUEST = '<request><div class="alert-image request-item"></div><h4 class="alert-name request-item">Full Name</h4> <options><yes class="request-item">accept</yes><no class="request-item">decline</no></options></request>'

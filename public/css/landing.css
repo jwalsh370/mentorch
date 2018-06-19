@@ -4,13 +4,13 @@
 
 .container-fluid {
     width: 100%;
-    background-color: #6c6c6c;
+    background-color: #40495b;
     min-height: 150px;
     background-size: cover;
     color: white;
     background-position: center;
-    background-blend-mode: hard-light;
-    background-image: url('https://images.unsplash.com/photo-1520560447607-3769beb2ce5a?ixlib=rb-0.3.5&s=6e67c60…&auto=format&fit=crop&w=1350&q=80');
+    background-blend-mode: multiply;
+    background-image: url(/img/bg.jpg);
     padding: 80px;
     padding-left: 24%;
     padding-right: 24%;
@@ -22,7 +22,7 @@ jumbotext {
     letter-spacing: 0px;
     margin: 0px;
     font-weight: 300;
-    font-size: 46px;
+    font-size: 57px;
     display: block;
     margin-bottom: 7px;
 }

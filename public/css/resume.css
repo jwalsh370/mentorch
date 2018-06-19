@@ -65,3 +65,24 @@ bar {
     width: 87%;
   }
 }
+
+.connect-button:hover {
+    box-shadow: 0px 6px 10px #0000001a;
+    transform: translateY(-6px);
+    background-color: #00a591;
+    color: white;
+    border-color: #00a591;
+}
+
+.connect-button {
+    background-color: #ffffff;
+    padding: 10px;
+    border: solid 1px #d6d6d6;
+    border-radius: 3px;
+    position: relative;
+    color: #636363;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+}
