@@ -38,13 +38,13 @@ firebase.auth().onAuthStateChanged(function(user) {
               if(msg.val().message){
                 var selfMessage = $(SELF_MESSAGE).appendTo('.chat-container');
                 selfMessage.find('.message-content').html(msg.val().message);
-                $('.chat-container').animate({scrollTop:$('.chat-container').height()}, 'fast')
+                $('.chat-container').animate({scrollTop:$('.chat-container')[0].scrollHeight}, '1000')
               }
             } else {
               if(msg.val().message){
                 var partnerMessage = $(PARTNER_MESSAGE).appendTo('.chat-container');
                 partnerMessage.find('.message-content').html(msg.val().message);
-                $('.chat-container').animate({scrollTop:$('.chat-container').height()}, 'fast')
+                $('.chat-container').animate({scrollTop:$('.chat-container')[0].scrollHeight}, '1000')
               }
             }
           })
