@@ -3,7 +3,7 @@ var auth = firebase.auth()
 var storage =  firebase.storage();
 var userRef = db.ref('users');
 var uid, name, userpic;
-var URL = 'http://localhost:8888';
+var URL = 'http://mentorch.herokuapp.com';
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     })
 
     $('.nav-username').html(name);
-    $('.nav-resume').attr('href', 'http://localhost:8888/resume/' + uid);
+    $('.nav-resume').attr('href', URL + '/resume/' + uid);
 
   } else {
 
