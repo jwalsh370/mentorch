@@ -176,7 +176,7 @@ app.get('/settings', function(req, res){
 // ZOOM CODE START
 
 app.get('/zoomView', function(req, res) {
-  res.render('zoom', {title: 'Connect with Zoom'});
+  res.render('zoomView', {title: 'Connect with Zoom'});
 });
 
 app.get('/createUser', function(req, res) {
