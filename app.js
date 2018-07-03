@@ -6,20 +6,7 @@ var expressValidator = require("express-validator");
 var Peer = require('simple-peer');
 var firebase = require("firebase");
 var admin = require("firebase-admin");
-
-
-var serviceAccount = {
-  "type": "service_account",
-  "project_id": "mentorch-84acd",
-  "private_key_id": "177081d2f1541380e7a48e492f71d1460e3cd607",
-  "private_key": "AIzaSyBefMYLqq4oZYvha0yl2ViJ5nv3EDqEEL8",
-  "client_email": "firebase-adminsdk-tetsn@mentorch-95b8c.iam.gserviceaccount.com",
-  "client_id": "114905696071145638915",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://accounts.google.com/o/oauth2/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-tetsn%40mentorch-95b8c.iam.gserviceaccount.com"
-}
+var serviceAccount = require('./mentorch-84acd-firebase-adminsdk-rv8ny-9520ca82cb.json');
 
 
 admin.initializeApp({
@@ -31,14 +18,14 @@ var db = admin.database();
 var userRef = db.ref("users");
 
 var config = {
-    apiKey: "AIzaSyBWIONF4XycZDshaiAwttY9kwX1hzyNxlY",
-    authDomain: "mentorch-95b8c.firebaseapp.com",
-    databaseURL: "https://mentorch-95b8c.firebaseio.com",
-    projectId: "mentorch-95b8c",
-    storageBucket: "mentorch-95b8c.appspot.com",
-    messagingSenderId: "141190493048"
+    apiKey: "AIzaSyBefMYLqq4oZYvha0yl2ViJ5nv3EDqEEL8",
+    authDomain: "mentorch-84acd.firebaseapp.com",
+    databaseURL: "https://mentorch-84acd.firebaseio.com",
+    projectId: "mentorch-84acd",
+    storageBucket: "mentorch-84acd.appspot.com",
+    messagingSenderId: "237332840910"
   };
-firebase.initializeApp(config);
+  firebase.initializeApp(config);
 
 var _ = require('lodash');
 

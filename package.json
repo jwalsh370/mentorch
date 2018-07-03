@@ -1,5 +1,5 @@
 {
-  "name": "bpanel",
+  "name": "mentorch",
   "version": "1.0.0",
   "description": "Simple Customer Management App",
   "main": "app.js",
@@ -8,7 +8,7 @@
     "start": "node app.js"
   },
   "engines": {
-    "node": "^7.0.0",
+    "node": "6.11.4",
     "npm": "3.10.10"
   },
   "dependencies": {
@@ -26,5 +26,16 @@
   },
   "author": "James Boushell",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwalsh370/mentorch.git"
+  },
+  "keywords": [
+    "mentorch"
+  ],
+  "bugs": {
+    "url": "https://github.com/jwalsh370/mentorch/issues"
+  },
+  "homepage": "https://github.com/jwalsh370/mentorch#readme"
 }
