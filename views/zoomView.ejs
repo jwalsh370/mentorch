@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <script>
+
+  </script>
+  <%- include('includes/head.ejs') %>
+  <link rel="stylesheet" type="text/css" href="css/discover.css"></link>
+  <body>
+  <%- include('includes/header.ejs') %>
+  <%- include('includes/chatmodule.ejs') %>
+
+
+
+  <div class="container">
+    <%- include('includes/controlpanel.ejs') %>
+
+    <div class="hub-container flex-3">
+      <h1>Zoom</h1></br>
+      <div class="main-panel hub-content">
+        <h4>Zoom Meeting</h4>
+        <a href="/meetings">Create Meeting</a>
+        <a href="/meetingdelete">Delete Meeting</a>
+        <a href="/meetingupdate"> Update Meeting</a>
+        <a href="/meetinglist">List Meetings</a>
+
+      </div>
+    </div>
+
+
+  <%- include('includes/footer.ejs') %>
+  <script src="/scripts/discover.js"></script>
+  </body>
+</html>
