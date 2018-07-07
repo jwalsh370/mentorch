@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <script>
-
-  </script>
+<link rel="stylesheet" type="text/css" href="css/contacts.css"></link>
   <%- include('includes/head.ejs') %>
-  <link rel="stylesheet" type="text/css" href="css/contacts.css"></link>
+
   <body>
   <%- include('includes/header.ejs') %>
   <%- include('includes/chatmodule.ejs') %>
@@ -24,10 +22,14 @@
       <div class="message-panel hub-content">
       </div>
     </div>
+
+    <%- include('includes/footer.ejs') %>
+    <script src="/scripts/contacts.js"></script>
+
   </div>
 
 
-  <%- include('includes/footer.ejs') %>
-  <script src="/scripts/contacts.js"></script>
+
+
   </body>
 </html>
