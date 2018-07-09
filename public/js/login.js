@@ -405,10 +405,10 @@ auth.onAuthStateChanged(function(user){
 
 
 function createUser(first, last, state, city, birthdate, picture_url, index){
-  //console.log('CREATE USER');
+  console.log('CREATE USER');
     auth.onAuthStateChanged(function(user){
-      //alert(first);
-      //alert(user.uid);
+      alert(first);
+      alert(user.uid);
       var uid = user.uid;
       //userRef.child(uid).once('value', function(snap){
       //  if(snap.val().index == 0){
@@ -446,45 +446,4 @@ function createUser(first, last, state, city, birthdate, picture_url, index){
 
 }
 
-
-
-var INFO_POPUP =
-'<div class="grey-shade">'+
-'<div class="popup-container">'+
-'<div class="popup-container" style="z-index: 100000;">'+
-'  <div class="popup">'+
-'    <div class="container-fluid popup-header"><img class="center-img" src="./img/signInHeader.png"></div>'+
-'    <div class="container-fluid popup-body">'+
-'      <span class="medium-text grey-text">Lets get your account setup!</span>'+
-'      <input type="text" id="first-name-input" placeholder="First name" class="signup-input"></input>'+
-'      <input type="text" id="last-name-input" placeholder="Last name" class="signup-input"></input>'+
-'      <input type="text" id="state-input" placeholder="State" class="signup-input"></input>'+
-'      <input type="text" id="city-input" placeholder="City" class="signup-input"></input>'+
-'      <input type="date" id="birthday-input" placeholder="Birthdate" class="signup-input"></input>'+
-'      <input type="button" id="info-submit" placeholder="Create account!" class="signup-submit" value="Create account!"></input>'+
-'    </div>'+
-'  </div>'+
-'</div>'+
-'</div>'
-
-var EMAIL_POPUP =
-'<div class="grey-shade">'+
-'<div class="popup-container">'+
-'<div class="popup-container" style="z-index: 100000;">'+
-'  <div class="popup">'+
-'    <div class="container-fluid popup-header"><img class="center-img" src="./img/signInHeader.png"></div>'+
-'    <div class="container-fluid popup-body">'+
-'      <span class="medium-text grey-text">Lets get your account setup!</span>'+
-'      <input type="text" id="username-input" placeholder="E-mail" class="signup-input"></input>'+
-'      <input type="password" id="password-input" placeholder="Password" class="signup-input"></input>'+
-'      <input type="password" id="password-match-input" placeholder="Re-enter Password" class="signup-input"></input>'+
-'      <input type="text" id="first-name" placeholder="First name" class="signup-input"></input>'+
-'      <input type="text" id="last-name" placeholder="Last name" class="signup-input"></input>'+
-'      <input type="text" id="state" placeholder="State" class="signup-input"></input>'+
-'      <input type="text" id="city" placeholder="City" class="signup-input"></input>'+
-'      <input type="date" id="birthday" placeholder="Birthdate" class="signup-input"></input>'+
-'      <input type="button" id="info-submit" placeholder="Create account!" class="signup-submit" value="Create account!"></input>'+
-'    </div>'+
-'  </div>'+
-'</div>'+
-'</div>'
+  

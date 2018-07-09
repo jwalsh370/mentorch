@@ -25,7 +25,7 @@ auth.onAuthStateChanged(function(user){
   var count = 0;
   $('#notification-count').hide()
 
-  userRef.child(user.uid).child('notifications').on('child_added', function(snap){
+  userRef.child(user.uid).child(`notifications`).on('child_added', function(snap){
     $('#notification-count').show()
     count ++;
     $('#notification-count').html(count);

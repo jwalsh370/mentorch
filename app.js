@@ -17,6 +17,9 @@ var jwt = require('jsonwebtoken');
 
 
 
+
+
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://mentorch-84acd.firebaseio.com"
@@ -252,6 +255,8 @@ app.post('/createMeeting', function(req, res) {
     });
   res.redirect('/');
 });
+
+
 
 app.get('/listMeeting', function(req, res) {
   res.render('listMeetings', {title: 'Manage Meetings'});

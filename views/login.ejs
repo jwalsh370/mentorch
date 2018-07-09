@@ -4,9 +4,10 @@
   <%- include('includes/head.ejs') %>
   <link rel="stylesheet" type="text/css" href="css/loginpage.css"></link>
   <body>
-    <div class="container">
+
 
   <%- include('includes/header.ejs') %>
+  <div class="container">
     <div class="hub-container flex-3">
 
       <div class="main-panel hub-content" style="text-align: center;">
@@ -18,6 +19,22 @@
         </form>
         <button class="google-login"><i class="fab fa-google"></i>Login with Google!</button></br>
         <button class="facebook-login"><i class="fab fa-facebook-f"></i>Login with Facebook!</button></br>
+        <script type="in/Login"></script></br>
+
+
+
+        <div id="profileData" style="display: none;">
+    <p><a href="javascript:void(0);" onclick="logout()">Logout</a></p>
+    <div id="picture"></div>
+    <div class="info">
+        <p id="name"></p>
+        <p id="intro"></p>
+        <p id="email"></p>
+        <p id="location"></p>
+        <p id="link"></p>
+    </div>
+</div>
+
         <a href="/register">Need an account? Register today!</a>
       </div>
     </div>
@@ -26,5 +43,46 @@
   </div>
   <%- include('includes/footer.ejs') %>
   <script src="/scripts/loginpage.js"></script>
+
+
+  <script type="text/javascript">
+      // Setup an event listener to make an API call once auth is complete
+      function onLinkedInLoad() {
+          IN.Event.on(IN, "auth", getProfileData);
+      }
+
+      // Use the API call wrapper to request the member's profile data
+      function getProfileData() {
+          IN.API.Profile("me").fields("id", "first-name", "last-name", "headline", "location", "picture-url", "public-profile-url", "email-address").result(displayProfileData).error(onError);
+      }
+
+      // Handle the successful return from the API call
+      function displayProfileData(data){
+          var user = data.values[0];
+          document.getElementById("picture").innerHTML = '<img src="'+user.pictureUrl+'" />';
+          document.getElementById("name").innerHTML = user.firstName+' '+user.lastName;
+          document.getElementById("intro").innerHTML = user.headline;
+          document.getElementById("email").innerHTML = user.emailAddress;
+          document.getElementById("location").innerHTML = user.location.name;
+          document.getElementById("link").innerHTML = '<a href="'+user.publicProfileUrl+'" target="_blank">Visit profile</a>';
+          document.getElementById('profileData').style.display = 'block';
+      }
+
+      // Handle an error response from the API call
+      function onError(error) {
+          console.log(error);
+      }
+
+      // Destroy the session of linkedin
+      function logout(){
+          IN.User.logout(removeProfileData);
+      }
+
+      // Remove profile data from page
+      function removeProfileData(){
+          document.getElementById('profileData').remove();
+      }
+  </script>
+
   </body>
 </html>
