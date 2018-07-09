@@ -87,12 +87,14 @@ function createUser(first, last, state, city, birthdate, picture_url, index){
             user_id: user.uid,
             bio: 'Design is life!',
             profession: '',
+            mentor_type:mentor_type,
             index: index
           })
 
           algoliaIndex.addObject({
             firstname: first,
             lastname: last,
+            mentor: mentor_type,
             profession: '',
             bio: '',
             tags: '',

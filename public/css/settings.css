@@ -1,14 +1,14 @@
-input {
+/* input {
     border-radius: 3px;
     border: solid 1px lightgrey;
     padding: 10px;
     margin-bottom: 10px;
     width: 98%;
-}
-
+} */
+/* 
 input:focus {
   outline: none;
-}
+} */
 
 textarea:focus {
   outline: none;
