@@ -189,14 +189,14 @@ app.get('/createUser', function(req, res) {
 app.post('/createUser', function(req, res) {
 
   var options = {
-    qs: {api_key: zoom_key, api_secret: zoom_sec, data_type: "JSON", email: req.body.email , type: 2}
+    qs: {api_key: 'fDbkPuxiQtW4o00abilt4Q', api_secret: 'ixWlMEb18wD5gzHJCnqxDJPLN2uUswcsLRUY', data_type: "JSON", email: req.body.email , type: 2}
   };
 
   // make an asynchronous request to zoom to create a User
   var asyncres = thenrequest('POST',"https://dev.zoom.us/v1/user/create",options).done(function (res) {
     console.log(res.getBody('utf8'));
     });
-  res.redirect('/');
+  res.redirect('/zoomView');
 });
 
 app.get('/autoUser', function(req, res) {
@@ -343,9 +343,9 @@ app.all('/call', function(req, res){
 
 })
 
-var port = process.env.PORT || 8888;
+var port = process.env.PORT || 5000;
 
-app.set('port', (process.env.PORT || 8888))
+app.set('port', (process.env.PORT || 5000))
 
 http.listen(port, function(){
   console.log("Server is up and running on port " + port);

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<%- include('includes/head.ejs') %>
+
+
   <div class="container">
 
   <popup class="transparent">
-    <div class="content content1 transparent">
+    <div class="content content1 transparent" style="background:black;">
       <div class="popup-container">
         <div class="popup-header">
           <h1 class='popup-h1'>More details about you!</h1>
           <h3 class='popup-h3'>To enhance our mentor matching machines, tell us a little about yourself!</h1>
         </div>
-        <input class="popup-input" type='text' placeholder='First Name' id='firstname'></input>
-        <input class="popup-input" type='text' placeholder='Last Name' id='lastname'></input>
-        <input class="popup-input" type='text' placeholder='City' id='city'></input>
-        <input class="popup-input" type='text' placeholder='State' id='state'></input>
-        <input class="popup-input" type="text" placeholder='Birthday' onfocus="(this.type='date')" onblur="(this.type='text')" id='birthday'></input>
-          <select style="margin-left:50px; margin-right:50px"class= "popup-input" id="proffesion">
+        <input class="popup-input" type='text' placeholder='First Name' id='firstname' required></input>
+        <input class="popup-input" type='text' placeholder='Last Name' id='lastname' required></input>
+        <input class="popup-input" type='text' placeholder='City' id='city' required></input>
+        <input class="popup-input" type='text' placeholder='State' id='state' required></input>
+        <input class="popup-input" type="text" placeholder='Birthday' onfocus="(this.type='date')" onblur="(this.type='text')" id='birthday' required></input>
+          <select style="margin-left:50px; margin-right:50px;" class="popup-input" id="proffesion">
             <option value="None">Choose a Proffession...</option>
             <option value="Accounting">Accounting</option>
             <option value="Administrative">Administrative</option>
@@ -43,6 +46,104 @@
             <option value="Sales">Sales</option>
             <option value="Support">Support</option>
           </select>
+            <div class="row popup-input" style="margin-left:auto; margin-right:auto; width:640px;">
+                <h5>I am a...</h5>
+              <div class="col-md-4">
+                <input class="mentorType" type="radio" name="MentorType" value="mentor">
+                <label for="mentor_type">Mentor</label>
+              </div>
+              <div class="col-md-4">
+                <input  type="radio" name="MentorType" value="mentee">
+                <label for="mentorType">Mentee</label>
+              </div>
+              <div class="col-md-4">
+                <input type="radio" name="MentorType" value="mentor & mentee">
+                <label for="mentorType">Mentor & Mentee</label>
+              </div>
+            </div>
+               <select id="mentorTeach" style="margin-left:auto; margin-right:auto; width:640px;" class=" popup-input">
+                <option value="None">I mentor in...</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Administrative">Administrative</option>
+                <option value="Arts and Design">Arts and Design</option>
+                <option value="Business Development">Business Development</option>
+                <option value="Community & Social Services">Community & Social Services</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Education">Education</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Entrepreneurship">Entrepreneurship</option>
+                <option value="Finance">Finance</option>
+                <option value="Healthcare Services">Healthcare Services</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Legal">Legal</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Media & Communications">Media & Communications</option>
+                <option value="Military & Protective Services">Military & Protective Services</option>
+                <option value="Operations">Operations</option>
+                <option value="Product Management">Product Management</option>
+                <option value="Program & Product Management">Program & Product Management</option>
+                <option value="Purchasing">Purchasing</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Rersearch">Rersearch</option>
+                <option value="Sales">Sales</option>
+                <option value="Support">Support</option>
+              </select>
+              <select class="popup-input" style="margin-left:auto; margin-right:auto; width:640px;" id="mentorLearn">
+                <option value="None">I wish to recieve mentorship in...</option>
+                <option value="Accounting">Accounting</option>
+                <option value="Administrative">Administrative</option>
+                <option value="Arts and Design">Arts and Design</option>
+                <option value="Business Development">Business Development</option>
+                <option value="Community & Social Services">Community & Social Services</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Education">Education</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Entrepreneurship">Entrepreneurship</option>
+                <option value="Finance">Finance</option>
+                <option value="Healthcare Services">Healthcare Services</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Legal">Legal</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Media & Communications">Media & Communications</option>
+                <option value="Military & Protective Services">Military & Protective Services</option>
+                <option value="Operations">Operations</option>
+                <option value="Product Management">Product Management</option>
+                <option value="Program & Product Management">Program & Product Management</option>
+                <option value="Purchasing">Purchasing</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Rersearch">Rersearch</option>
+                <option value="Sales">Sales</option>
+                <option value="Support">Support</option>
+              </select>
+              <select class="form-control popup-input" style="margin-left:auto; margin-right:auto; width:640px;" name="" id="contact-frequency">
+                <option value="">How often Would You like to be contacted?</option>
+                <option value="">Daily</option>
+                <option value="">Weekly</option>
+                <option value="">Monthly</option>
+                <option value="">Random</option>
+                <option value="">Other</option>
+              </select>
+           <p style="margin-left:auto; margin-right:auto;">Best Time to Contact?</p>
+              <select class="form-control popup-input" style="margin-left:auto; margin-right:auto; width:640px;" name="" multiple id="contactTime">
+                <option value="">Morning</option>
+                <option value="">Night</option>
+                <option value="">Weekdays</option>
+                <option value="">Weekends</option>
+                <option value="">Other</option>
+              </select> -->
+              <p style="margin-left:auto; margin-right:auto;">Best Contact Method?</p>
+              <select class="form-control popup-input" style="margin-left:auto; margin-right:auto; width:640px;" name="" multiple id="contactMethod">
+                <option value="">Text</option>
+                <option value="">Email</option>
+                <option value="">Video Chat</option>
+                <option value="">Call</option>
+                <option value="">Other</option>
+              </select>
+
         <input class="popup-button popup-button1" type='button' value='Next' id='next1'></input>
       </div>
     </div>
@@ -105,24 +206,78 @@
     <div class="hub-container flex-3">
 
       <div class="main-panel hub-content" style="text-align: center">
-        <form id="login-form">
+        <form id="login-form" class="needs-validation" novalidate>
           <img src="img/logo.png"></img></br>
-          <input id="email-input" class="login-input" type="text" placeholder="Email"></input></br>
-          <input id="password-input" class="login-input" type="password" placeholder="Password"></input></br>
+            <input id="email-input" class="login-input" type="email" placeholder="Email" required></input></br>
+          <input id="password-input" class="login-input" type="password" placeholder="Password" required></input></br>
           <input id="re-password-input" class="login-input" type="password" placeholder="Re-enter Password"></input></br>
           <input class="register-submit login-submit" type="button" value="Register!"></input></br>
         </form>
         <button class="google-login"><i class="fab fa-google"></i>Register with Google!</button></br>
         <button class="facebook-login"><i class="fab fa-facebook-f"></i>Register with Facebook!</button></br>
+        <script type="in/Login"></script></br>
+
         <a href="/login">Already have an account? Login here!</a>
       </div>
     </div>
+
+    <!-- <div id="profileData" style="display: none;">
+      <p><a href="javascript:void(0);" onclick="logout()">Logout</a></p>
+      <div id="picture"></div>
+      <div class="info">
+          <p id="name"></p>
+          <p id="intro"></p>
+          <p id="email"></p>
+          <p id="location"></p>
+          <p id="link"></p>
+      </div>
+    </div> -->
 
 
   </div>
   <%- include('includes/footer.ejs') %>
   <script src="/scripts/selecttags.js"></script>
   <script src="/scripts/register.js"></script>
+  <script type="text/javascript">
+      // Setup an event listener to make an API call once auth is complete
+      function onLinkedInLoad() {
+          IN.Event.on(IN, "auth", getProfileData);
+      }
+
+      // Use the API call wrapper to request the member's profile data
+      function getProfileData() {
+          IN.API.Profile("me").fields("id", "first-name", "last-name", "headline", "location", "picture-url", "public-profile-url", "email-address").result(displayProfileData).error(onError);
+      }
+
+      // Handle the successful return from the API call
+      // function displayProfileData(data){
+      //     var user = data.values[0];
+      //     document.getElementById("picture").innerHTML = '<img src="'+user.pictureUrl+'" />';
+      //     document.getElementById("name").innerHTML = user.firstName+' '+user.lastName;
+      //     document.getElementById("intro").innerHTML = user.headline;
+      //     document.getElementById("email").innerHTML = user.emailAddress;
+      //     document.getElementById("location").innerHTML = user.location.name;
+      //     document.getElementById("link").innerHTML = '<a href="'+user.publicProfileUrl+'" target="_blank">Visit profile</a>';
+      //     document.getElementById('profileData').style.display = 'block';
+      // }
+
+      // Handle an error response from the API call
+      function onError(error) {
+          console.log(error);
+      }
+
+      // Destroy the session of linkedin
+      function logout(){
+          IN.User.logout(removeProfileData);
+      }
+
+      // Remove profile data from page
+      function removeProfileData(){
+          document.getElementById('profileData').remove();
+      }
+  </script>
+
+
 
   </body>
 </html>

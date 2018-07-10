@@ -13,8 +13,8 @@
       <div class="main-panel hub-content" style="text-align: center;">
         <form id="login-form">
           <img src="img/logo.png"></img></br>
-          <input id="username-input" class="login-input" type="text" placeholder="Username"></input></br>
-          <input id="password-input" class="login-input" type="password" placeholder="Password"></input></br>
+          <input id="username-input" class="login-input" type="text" placeholder="Username" required></input></br>
+          <input id="password-input" class="login-input" type="password" placeholder="Password" required></input></br>
           <input class="login-submit" type="submit" value="Login!"></input></br>
         </form>
         <button class="google-login"><i class="fab fa-google"></i>Login with Google!</button></br>
@@ -64,7 +64,6 @@
           document.getElementById("intro").innerHTML = user.headline;
           document.getElementById("email").innerHTML = user.emailAddress;
           document.getElementById("location").innerHTML = user.location.name;
-          document.getElementById("link").innerHTML = '<a href="'+user.publicProfileUrl+'" target="_blank">Visit profile</a>';
           document.getElementById('profileData').style.display = 'block';
       }
 

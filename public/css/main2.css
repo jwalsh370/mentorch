@@ -403,10 +403,8 @@ img.logo {
 }
 
 .main-panel {
-    border-top: solid 1px #d5d5d5;
-    border-left: solid 1px #d5d5d5;
-    border-right: solid 1px #d5d5d5;
-    border-bottom: solid 1px #d5d5d5;
+    border: solid 1px #d5d5d5;
+
 }
 
 a.control-link {
