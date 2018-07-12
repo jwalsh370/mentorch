@@ -33,7 +33,8 @@ function loadCards(){
           var name = data.val().first_name + " " + data.val().last_name;
           var bio = data.val().bio;
           var profession = data.val().profession;
-          var mentor_type = data.val().mentor_type;
+          var mentor_type = data.val().mentorType;
+          var mentor_learn = data.val().mentorLearn;
 
           //alert(data.val().user_id)
           var card = $(SMALLCARD).appendTo(".card-container");
